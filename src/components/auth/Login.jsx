@@ -5,7 +5,6 @@ export default class Login extends Component {
     return (
       <>
       <br />
-      <br />
         <section> 
     <h1 class="large text-primary">Login</h1>
 <form class="form" action="xyz.html">
