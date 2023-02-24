@@ -1,0 +1,279 @@
+/* for comments 
+global style
+*/
+/* root : common colors and margins */
+
+:root{
+
+  --primary-color: #17a2b8; 
+  --dark-color: #343a40;
+  --light-color: #f4f4f4;
+  --danger-color: #dc3545;
+  --success-color: #28a745;
+}
+
+body{
+  font-family: "Raleway", sans-serif; 
+  background-color: #ffff;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: black;
+
+}
+
+a{
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+/*class in CSS: .name */
+
+
+/*Utilties*/
+.container{
+  max-width: 1100px;
+  margin: auto;
+  
+
+}
+
+
+/* text styles */
+.x-large{
+  font-size: 4rem;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+
+.large{
+  font-size: 3rem;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.text-primary{
+  color: var(--primary-color);
+}
+text-dark{
+
+  color: var(--dark-color);
+}
+
+.text-light{
+  color: var(--light-color);
+}
+
+.text-danger{
+  color: var(--danger-color);
+}
+
+.text-success{
+  color: var(--success-color);
+}
+
+.text-center{
+  text-align: center;
+}
+
+.navbar{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.7rem 2rem;
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  top: 0;
+  border-bottom: solid 1px var(--primary-color);
+  opacity: 0.9;   
+}
+
+.bg-dark{
+  background-color: var(--dark-color);
+  color: #ffff;
+}
+
+.navbar a{
+  color:#ffff;
+  padding: 0.45rem;
+  margin: 0 0.25rem;
+
+}
+
+.navbar a:hover{
+  color: var(--primary-color);
+}
+
+.landing{
+  position: relative;
+  background: url('./assets/images/showcase.jpg') no-repeat center;
+  height: 100vh;  
+}
+
+.dark-overlay{
+  background-color: rgba(0,0,0,0.7);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.landing-inner{
+  color: #ffff;
+  height: 100%;
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.btn-primary{
+  display: inline-block;
+  background: var(--primary-color);
+  color: #fff;
+  padding: 0.4rem 1.3rem;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  margin-right: 0.5rem;
+
+}
+.btn-light{
+  background: var(--light-color);
+  color: #333;
+}
+
+/* froms out csss class / 
+inner / child class */
+
+.form .form-group{
+  margin: 1.2rem 0;
+
+
+}
+
+.form .form-text{
+  display: inline-block;
+  margin-top: 0.3rem;
+  color: #888;
+
+}
+
+.form input[type="text"],
+
+.form input[type="email"],
+
+.form input[type="password"],
+
+.form input[type="date"],
+.form select,
+.form textarea{
+  display: block;
+  width: 100%;
+  padding: 0.4rem;
+  font-size: 1.2rem;
+  border: 1px solid #ccc;
+}
+
+/* dashboard actions */
+
+.dash-buttons a{
+  display: block;
+  width: 100%;
+  margin-bottom: 0.2rem;
+
+}
+
+/* tables */
+
+.table th,
+.table td {
+  padding: 1rem;
+  text-align: left;
+
+}
+
+.table th{
+  background-color: var(--light-color);
+}
+
+.btn-danger {
+  background-color: var(--danger-color);
+  color: #fff;
+  border: none;
+}
+
+/*developer classes*/
+
+.developer{
+  background-color: rgb(172, 172, 214);
+  color: black;
+  border: none;
+  margin: 1rem;
+  padding: 1rem;
+
+}
+
+.img-profile{
+
+  border-radius: 50%;
+  position: relative;
+  height: 12rem;
+  width: 12rem;
+}
+
+.text-profile{
+  margin-left: 1rem;
+  display: inline-block;
+}
+
+.text-right{
+  align-content: flex-end;
+  margin-left: 17rem;
+}
+
+.devprofile{
+  background-color: var(--primary-color);
+  color: #ffff;
+  border: none;
+  margin: 1rem;
+  padding: 1rem;
+  text-align: center;
+}
+
+.devpage{
+
+  background-color: var(--light-color);
+  color: black;
+
+}
+
+.devpage h3{
+  color: var(--primary-color);
+}
+
+.devpage span{
+  margin-left: 0.5rem;
+}
+
+.devex{
+  background-color: var(--light-color);
+  color: black;
+  display: inline-block;
+  text-align: left;
+  position: relative;
+}
+.devex h3{
+  color: var(--primary-color);
+}
+
+
+.devinline{
+  display: inline-block;
+
+}
