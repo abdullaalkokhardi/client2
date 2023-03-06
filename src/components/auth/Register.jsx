@@ -23,8 +23,9 @@ export default class Register extends Component {
   onSubmit=(e)=>{
     e.preventDefault();
     console.log(this.state);
-    api.post('/users', this.state)
+    api.post('/users', this.state).then(res=>console.log(res.data)).catch()
     //  -end point -data -headers
+    //then for success / catch for failure
   };
 
   render() {

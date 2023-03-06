@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import api from '../../utils/api';
+
 
 export default class Login extends Component {
 
@@ -6,7 +8,7 @@ export default class Login extends Component {
     super();
     //call the base class contseuctor 
     this.state={
-      username:"",
+      email:"",
       password:"",
     };
     // state: object from base class to hold data 
@@ -21,9 +23,11 @@ export default class Login extends Component {
   onSubmit=(e)=>{
     e.preventDefault();
     console.log(this.state);
+    api.post('/auth', this.state).then(res=>console.log(res.data)).catch()
+
   };
   render() {
-    const { username, password}= this.state;
+    const { email, password}= this.state;
 
     return (
       <>
@@ -32,7 +36,7 @@ export default class Login extends Component {
     <h1 class="large text-primary">Login</h1>
 <form class="form" onSubmit={this.onSubmit}>
     <div class="form-group"> 
-    <input type="text" name="username" placeholder="Username" value={username} onChange={this.onChange}/>
+    <input type="text" name="email" placeholder="Username" value={email} onChange={this.onChange}/>
     </div>
     <div class="form-group">
     <input type="password" name="password"  placeholder="Password" value={password} onChange={this.onChange}/>
