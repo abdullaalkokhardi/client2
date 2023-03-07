@@ -2,10 +2,10 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 
 
-export default class Header extends Component {
-  render() {
-    return (
-      <>
+const Header = () => {
+  return (
+
+        <>
           <nav class="navbar bg-dark">
     <i class="fas fa-code"></i>
         <Link to="/">DevConnector</Link>
@@ -14,6 +14,9 @@ export default class Header extends Component {
         <Link to="/login">Login</Link>
         </nav>
       </>
-    )
-  }
+
+  )
 }
+
+export default Header
+

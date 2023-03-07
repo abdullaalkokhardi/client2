@@ -2,9 +2,10 @@ import React, { Component } from "react";
 //import : here it has to import a class / function from the provided location / library.
 import { Link } from 'react-router-dom'
 
-export default class Landing extends Component {
-  render() {
-    return <> <section class="landing "> 
+
+const Landing = () => {
+  return (
+    <> <section class="landing "> 
     <div class="dark-overlay">
         <div class="landing-inner">
 <h1 class="large">Developer Connector</h1>
@@ -16,9 +17,11 @@ export default class Landing extends Component {
 </div>
 </div>
 </div>
-</section></>;
-  }
+</section></>
+  )
 }
+
+export default Landing
 
 
 // export : to use it as public

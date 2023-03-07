@@ -1,13 +1,16 @@
 import React, { Component } from 'react'
 
-export default class Footer extends Component {
-  render() {
-    return (
-      <>
-        <footer> 
+
+const Footer = () => {
+  return (
+    <>
+    <footer> 
 &copy; &trade; www.eibfs.com {new Date().getFullYear()}
 </footer>
-      </>
-    )
-  }
+  </>
+  )
 }
+
+export default Footer
+
+

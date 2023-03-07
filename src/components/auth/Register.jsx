@@ -10,6 +10,7 @@ export default class Register extends Component {
       email:"",
       password:"",
       confirmPassword:"", 
+      errors:[],
     };
     // state: object from base class to hold data 
    
@@ -23,7 +24,10 @@ export default class Register extends Component {
   onSubmit=(e)=>{
     e.preventDefault();
     console.log(this.state);
-    api.post('/users', this.state).then(res=>console.log(res.data)).catch()
+    api.post('/users', this.state).then(res=>console.log(res.data)).catch((err)=>{
+      this.setState({["errors"]: err.response.data.errors});
+      console.log(err.response.data)
+    });
     //  -end point -data -headers
     //then for success / catch for failure
   };
@@ -34,17 +38,26 @@ export default class Register extends Component {
       <>
        <section class="container">
         <br />
+        <br />
+        <br />
+
       <h1 class="large text-primary">Sign Up</h1>
       <p class="lead"><i class="fas fa-user"></i> Create Your Account</p>
       <form class="form" onSubmit={this.onSubmit}>
         <div class="form-group">
-          <input type="text" placeholder="Name" name="name" required value={name}
+          <input type="text" placeholder="Name" name="name" value={name}
           onChange={this.onChange}
           />
+          <div className='d-block invalid-feedback'>
+            {this.state.errors.length!=0 && this.state.errors[0].msg}
+          </div>
         </div>
         <div class="form-group">
           <input type="email" placeholder="Email Address" name="email" value={email} 
           onChange={this.onChange}/>
+           <div className='d-block invalid-feedback'>
+            {this.state.errors.length!=0 && this.state.errors[1].msg}
+          </div>
           <small class="form-text"
             >This site uses Gravatar so if you want a profile image, use a
             Gravatar email</small
@@ -60,6 +73,9 @@ export default class Register extends Component {
             onChange={this.onChange}
             
           />
+           <div className='d-block invalid-feedback'>
+            {this.state.errors.length!=0 && this.state.errors[2].msg}
+          </div>
         </div>
         <div class="form-group">
           <input
