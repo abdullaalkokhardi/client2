@@ -24,6 +24,7 @@ const onSubmit=(e)=>{
 };
 
 
+
   const { name, email, password, confirmPassword}= formData;
 
   return (
