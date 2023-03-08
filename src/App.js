@@ -8,12 +8,13 @@ import { BrowserRouter} from 'react-router-dom'
 
 
 function App() {
+  const appName="EIBFS Devconnector";
   return (
     <div className="App" id="app">
       <BrowserRouter>
-      <Header></Header>
+      <Header appName={appName}></Header>
       <Routers></Routers>
-      <Footer></Footer>
+      <Footer appName={appName}></Footer>
       </BrowserRouter>
     </div>
 

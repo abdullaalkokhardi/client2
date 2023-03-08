@@ -1,11 +1,11 @@
 import React, { Component } from 'react'
 
 
-const Footer = () => {
+const Footer = ({appName}) => {
   return (
     <>
     <footer> 
-&copy; &trade; www.eibfs.com {new Date().getFullYear()}
+&copy; &trade; www.{appName}.com {new Date().getFullYear()}
 </footer>
   </>
   )
